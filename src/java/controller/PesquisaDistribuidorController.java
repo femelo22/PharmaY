@@ -14,7 +14,7 @@ public class PesquisaDistribuidorController extends HttpServlet {
 
 protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            request.setAttribute("distribuidores", Distribuidor.obterDistribuidor());
+            request.setAttribute("distribuidores", Distribuidor.obterDistribuidores());
             RequestDispatcher view = request.getRequestDispatcher("/pesquisaDistribuidor.jsp");
             view.forward(request, response);
         }catch (ClassNotFoundException | SQLException e){

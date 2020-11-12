@@ -13,7 +13,7 @@
         <servlet-class>controller.PesquisaConvenioController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>PesquisarDistribuidorController</servlet-name>
+        <servlet-name>PesquisaDistribuidorController</servlet-name>
         <servlet-class>controller.PesquisaDistribuidorController</servlet-class>
     </servlet>
     <servlet>
@@ -32,6 +32,54 @@
         <servlet-name>PesquisaVendaController</servlet-name>
         <servlet-class>controller.PesquisaVendaController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ManterConvenioController</servlet-name>
+        <servlet-class>controller.ManterConvenioController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManterItemVendaController</servlet-name>
+        <servlet-class>controller.ManterItemVendaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManterProdutoController</servlet-name>
+        <servlet-class>controller.ManterProdutoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManterFuncionarioController</servlet-name>
+        <servlet-class>controller.ManterFuncionarioController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManterCategoriaController</servlet-name>
+        <servlet-class>controller.ManterCategoriaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManterClienteController</servlet-name>
+        <servlet-class>controller.ManterClienteController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManterDistribuidorController</servlet-name>
+        <servlet-class>controller.ManterDistribuidorController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManterVendaController</servlet-name>
+        <servlet-class>controller.ManterVendaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Relatorio1ConvenioController</servlet-name>
+        <servlet-class>controller.Relatorio1ConvenioController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Relatorio2ConvenioController</servlet-name>
+        <servlet-class>controller.Relatorio2ConvenioController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Relatorio1CategoriaController</servlet-name>
+        <servlet-class>controller.Relatorio1CategoriaController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Relatorio1ClienteController</servlet-name>
+        <servlet-class>controller.Relatorio1ClienteController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>PesquisaCategoriaController</servlet-name>
         <url-pattern>/PesquisaCategoriaController</url-pattern>
@@ -45,8 +93,8 @@
         <url-pattern>/PesquisaConvenioController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>PesquisarDistribuidorController</servlet-name>
-        <url-pattern>/PesquisarDistribuidorController</url-pattern>
+        <servlet-name>PesquisaDistribuidorController</servlet-name>
+        <url-pattern>/PesquisaDistribuidorController</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>PesquisaFuncionarioController</servlet-name>
@@ -63,6 +111,54 @@
     <servlet-mapping>
         <servlet-name>PesquisaVendaController</servlet-name>
         <url-pattern>/PesquisaVendaController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManterConvenioController</servlet-name>
+        <url-pattern>/ManterConvenioController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManterItemVendaController</servlet-name>
+        <url-pattern>/ManterItemVendaController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManterProdutoController</servlet-name>
+        <url-pattern>/ManterProdutoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManterFuncionarioController</servlet-name>
+        <url-pattern>/ManterFuncionarioController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManterCategoriaController</servlet-name>
+        <url-pattern>/ManterCategoriaController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManterClienteController</servlet-name>
+        <url-pattern>/ManterClienteController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManterDistribuidorController</servlet-name>
+        <url-pattern>/ManterDistribuidorController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManterVendaController</servlet-name>
+        <url-pattern>/ManterVendaController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Relatorio1ConvenioController</servlet-name>
+        <url-pattern>/Relatorio1ConvenioController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Relatorio2ConvenioController</servlet-name>
+        <url-pattern>/Relatorio2ConvenioController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Relatorio1CategoriaController</servlet-name>
+        <url-pattern>/Relatorio1CategoriaController</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>Relatorio1ClienteController</servlet-name>
+        <url-pattern>/Relatorio1ClienteController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -1,37 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <file>
+            <url>src/java/controller/ManterClienteController.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>81</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/pesquisaDistribuidor.jsp</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/pesquisaItemVenda.jsp</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/DistribuidorDAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/model/ItemVenda.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/CategoriaDAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/pesquisaVenda.jsp</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/model/Funcionario.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/ProdutoDAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/pesquisaConvenio.jsp</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/controller/PesquisaItemVendaController.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/ConvenioDAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/pesquisaFuncionario.jsp</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/pesquisaCliente.jsp</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/controller/PesquisaProdutoController.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/ItemVendaDAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/controller/PesquisaVendaController.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/DAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/model/Distribuidor.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/FuncionarioDAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/pesquisaCategoria.jsp</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/model/Produto.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/index.jsp</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/controller/PesquisaFuncionarioController.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/controller/PesquisaCategoriaController.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/VendaDAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/DAO/ClienteDAO.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/model/Cliente.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/src/java/model/Venda.java</file>
-            <file>file:/C:/Users/winicius/Documents/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/PharmaY/web/pesquisaProduto.jsp</file>
+            <file>file:/C:/Users/luiz1/Desktop/Faculdade/6°%20Periodo/Marco%20Antonio/PharmaY/src/java/DAO/ClienteDAO.java</file>
         </group>
     </open-files>
 </project-private>

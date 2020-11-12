@@ -6,6 +6,7 @@
 
 package model;
 
+import DAO.CategoriaDAO;
 import DAO.ClienteDAO;
 import java.sql.SQLException;
 import java.util.List;
@@ -31,7 +32,7 @@ public class Cliente {
         this.convenio = convenio;
         this.idConvenio = idConvenio;
     }
-   
+      
     public int getIdConvenio() {
         return idConvenio;
     }
@@ -90,5 +91,17 @@ public class Cliente {
     
     public static List<Cliente> obterClientes() throws ClassNotFoundException, SQLException {
         return ClienteDAO.getInstancia().obterCliente();
+    }
+    
+    public void gravar() throws SQLException, ClassNotFoundException{
+        ClienteDAO.getInstancia().gravarCliente(this);
+    }
+    
+    public void alterar() throws SQLException, ClassNotFoundException{
+        ClienteDAO.getInstancia().alterar(this);
+    }
+    
+    public void excluir() throws SQLException, ClassNotFoundException{
+        ClienteDAO.getInstancia().excluir(this);
     }
 }

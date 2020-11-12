@@ -6,6 +6,7 @@
 
 package model;
 
+import DAO.CategoriaDAO;
 import DAO.VendaDAO;
 import java.sql.SQLException;
 import java.util.List;
@@ -36,6 +37,7 @@ public class Venda {
         this.idConvenio = idConvenio;
         this.idProduto = idProduto;
     }
+    
 
     public int getIdConvenio() {
         return idConvenio;
@@ -100,7 +102,7 @@ public class Venda {
     public Produto getProduto() throws ClassNotFoundException, SQLException {
         
         if ((this.idProduto !=0 ) && (this.produto == null)) {
-            this.produto = Produto.obterProdutos(this.idProduto);
+            this.produto = Produto.obterProduto(this.idProduto);
         }
         return this.produto;
     }
@@ -109,14 +111,29 @@ public class Venda {
         this.produto = produto;
     }
     
-        public static Venda obterVendas(int codVenda) throws ClassNotFoundException, SQLException {
-       return VendaDAO.getInstance().obterVendas(codVenda);
+        public static Venda obterVenda(int codVenda) throws ClassNotFoundException, SQLException {
+       return VendaDAO.getInstance().obterVenda(codVenda);
 
     }
     
-    public static List<Venda> obterVenda() throws ClassNotFoundException, SQLException {
-       return VendaDAO.getInstance().obterVenda();
+    public static List<Venda> obterVendas() throws ClassNotFoundException, SQLException {
+       return VendaDAO.getInstance().obterVendas();
 
+    }
+    
+    
+    public void gravar() throws SQLException, ClassNotFoundException{
+       VendaDAO.getInstance().gravarVenda(this);
+    }
+    
+    
+    public void alterar() throws SQLException, ClassNotFoundException{
+       VendaDAO.getInstance().alterar(this);
+    }
+    
+    
+    public void excluir() throws SQLException, ClassNotFoundException{
+       VendaDAO.getInstance().excluir(this);
     }
     
     

@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import model.Convenio;
 
 /**
  *
@@ -31,26 +32,20 @@ public class CategoriaDAO extends DAO{
     }
     
     //cadastrando nova categoria
-     public void cadastrarCategoria(Categoria categoria) throws ClassNotFoundException{
-         Connection conn = null;
-         Statement st = null;
+     public void gravarCategoria(Categoria categoria) throws SQLException, ClassNotFoundException{
+         Connection conexao = null;
+         PreparedStatement stmt = null;
          
         try {
-            conn = BD.getInstancia().getConexao();
-            st = conn.createStatement();
+            conexao = BD.getInstancia().getConexao();
+            stmt = conexao.prepareStatement("INSERT INTO categoria (id, descricao) VALUES (?,?)");
+            stmt.setInt(1, categoria.getIdCategoria());
+            stmt.setString(2, categoria.getDescricao());
             
-            String sql = "INSERT INTO categoria (descricao)"
-                    + " VALUES (?)";
-
-            PreparedStatement stmt = (PreparedStatement) conn.prepareStatement(sql);
-            stmt.setString(1, categoria.getDescricao());
-      
-            stmt.execute();
-            stmt.close();
-
-        } catch (SQLException erro) {
-            System.out.println("Erro" + erro);
-        }
+            stmt.executeUpdate();  
+        } finally{
+            fecharConexao(conexao, stmt);
+        } 
     }  
      
      //listando categorias
@@ -105,4 +100,41 @@ public class CategoriaDAO extends DAO{
        return cat;
    } 
       
-}
+      public void alterar(Categoria categoria)throws SQLException, ClassNotFoundException {
+        Connection conexao = null;
+        PreparedStatement stmt = null;
+
+        try {
+            conexao = BD.getInstancia().getConexao();
+            stmt = conexao.prepareStatement("UPDATE categoria SET descricao = ? WHERE id = ?");
+            stmt.setString(1, categoria.getDescricao());                       
+            stmt.setInt(2, categoria.getIdCategoria());
+
+            stmt.executeUpdate();
+
+        } finally {
+            fecharConexao(conexao, stmt);
+        }
+    }
+      
+      public void excluir(Categoria categoria) throws SQLException, ClassNotFoundException {
+        Connection conexao = null;
+        PreparedStatement stmt = null;
+
+        try {
+            conexao = BD.getInstancia().getConexao();
+            stmt = conexao.prepareStatement("DELETE FROM categoria WHERE id = ?");
+
+            stmt.setInt(1, categoria.getIdCategoria());
+
+            stmt.executeUpdate();
+
+        } finally {
+            fecharConexao(conexao, stmt);
+        }
+    }
+      
+      
+
+}       
+

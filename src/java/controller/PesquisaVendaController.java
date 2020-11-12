@@ -13,7 +13,7 @@ public class PesquisaVendaController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            request.setAttribute("vendas", Venda.obterVenda());
+            request.setAttribute("vendas", Venda.obterVendas());
             RequestDispatcher view = request.getRequestDispatcher("/pesquisaVenda.jsp");
             view.forward(request, response);
         }catch (ClassNotFoundException | SQLException e){

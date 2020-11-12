@@ -6,6 +6,7 @@
 package model;
 
 import DAO.CategoriaDAO;
+import DAO.ConvenioDAO;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -38,13 +39,25 @@ public class Categoria {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    
-        public static Categoria obterCategoria(int codCategoria) throws ClassNotFoundException, SQLException {
-           return CategoriaDAO.getInstancia().obterCategoria(codCategoria);
+
+    public static Categoria obterCategoria(int codCategoria) throws ClassNotFoundException, SQLException {
+        return CategoriaDAO.getInstancia().obterCategoria(codCategoria);
+    }
+
+    public static List<Categoria> obterCategorias() throws ClassNotFoundException, SQLException {
+        return CategoriaDAO.getInstancia().obterCategorias();
+    }
+
+    public void gravar() throws SQLException, ClassNotFoundException {
+        CategoriaDAO.getInstancia().gravarCategoria(this);
+    }
+
+    public void alterar() throws SQLException, ClassNotFoundException {
+        CategoriaDAO.getInstancia().alterar(this);
     }
     
-    public static List<Categoria> obterCategorias() throws ClassNotFoundException, SQLException {
-           return CategoriaDAO.getInstancia().obterCategorias();
+     public void excluir() throws SQLException, ClassNotFoundException {
+        CategoriaDAO.getInstancia().excluir(this);
     }
 
 }

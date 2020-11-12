@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package model;
 
 import DAO.DistribuidorDAO;
@@ -32,7 +31,7 @@ public class Funcionario {
     private String cidade;
     private String cep;
 
-    public Funcionario(int idFuncionario, String nome, String cpf, String email, String nivelAcesso, String senha, String telefone, String logradouro, int numero,String complemento, String bairro, String estado, String cidade, String cep) {
+    public Funcionario(int idFuncionario, String nome, String cpf, String email, String nivelAcesso, String senha, String telefone, String logradouro, int numero, String complemento, String bairro, String estado, String cidade, String cep) {
         this.idFuncionario = idFuncionario;
         this.nome = nome;
         this.cpf = cpf;
@@ -47,8 +46,8 @@ public class Funcionario {
         this.estado = estado;
         this.cidade = cidade;
         this.cep = cep;
-    } 
-    
+    }
+
     public int getIdFuncionario() {
         return idFuncionario;
     }
@@ -160,13 +159,25 @@ public class Funcionario {
     public void setCep(String cep) {
         this.cep = cep;
     }
-    
+
     public static Funcionario obterFuncionarios(int codFuncionario) throws ClassNotFoundException, SQLException {
         return FuncionarioDAO.getInstancia().obterFuncionario(codFuncionario);
     }
-    
+
     public static List<Funcionario> obterFuncionario() throws ClassNotFoundException, SQLException {
         return FuncionarioDAO.getInstancia().obterFuncionarios();
     }
+
+    public void gravar() throws SQLException, ClassNotFoundException {
+        FuncionarioDAO.getInstancia().gravarFuncionario(this);
+    }
+
+    public void alterar() throws SQLException, ClassNotFoundException {
+        FuncionarioDAO.getInstancia().alterar(this);
+    }
     
+     public void excluir() throws SQLException, ClassNotFoundException {
+        FuncionarioDAO.getInstancia().excluir(this);
+    }
+
 }

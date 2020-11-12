@@ -1,12 +1,12 @@
 package model;
 
+import DAO.ClienteDAO;
 import DAO.ProdutoDAO;
 import java.sql.SQLException;
 import java.util.List;
 
-
 public class Produto {
-    
+
     private int idProduto;
     private String descricao;
     private float precoVenda;
@@ -37,8 +37,8 @@ public class Produto {
         this.idDistribuidor = idDistribuidor;
         this.idCategoria = idCategoria;
     }
-    
-        public int getIdDistribuidor() {
+
+    public int getIdDistribuidor() {
         return idDistribuidor;
     }
 
@@ -86,7 +86,6 @@ public class Produto {
         this.precoCusto = precoCusto;
     }
 
-
     public String getObs() {
         return obs;
     }
@@ -128,9 +127,9 @@ public class Produto {
     }
 
     public Distribuidor getDistribuidor() throws ClassNotFoundException, SQLException {
-        
+
         if ((this.idDistribuidor != 0) && (this.distribuidor == null)) {
-            this.distribuidor = Distribuidor.obterDistribuidores(this.idDistribuidor);
+            this.distribuidor = Distribuidor.obterDistribuidor(this.idDistribuidor);
         }
         return this.distribuidor;
     }
@@ -140,7 +139,7 @@ public class Produto {
     }
 
     public Categoria getCategoria() throws ClassNotFoundException, SQLException {
-        
+
         if ((this.idCategoria != 0) && (this.categoria == null)) {
             this.categoria = Categoria.obterCategoria(this.idCategoria);
         }
@@ -151,12 +150,24 @@ public class Produto {
         this.categoria = categoria;
     }
 
-        public static Produto obterProdutos(int codProduto) throws ClassNotFoundException, SQLException {
+    public static Produto obterProduto(int codProduto) throws ClassNotFoundException, SQLException {
         return ProdutoDAO.getInstancia().obterProduto(codProduto);
-}
-    
-    public static List<Produto> obterProduto() throws ClassNotFoundException, SQLException {
+    }
+
+    public static List<Produto> obterProdutos() throws ClassNotFoundException, SQLException {
         return ProdutoDAO.getInstancia().obterProdutos();
-}
-    
+    }
+
+    public void gravar() throws SQLException, ClassNotFoundException {
+        ProdutoDAO.getInstancia().gravarProduto(this);
+    }
+
+    public void alterar() throws SQLException, ClassNotFoundException {
+        ProdutoDAO.getInstancia().alterar(this);
+    }
+
+    public void excluir() throws SQLException, ClassNotFoundException {
+        ProdutoDAO.getInstancia().excluir(this);
+    }
+
 }

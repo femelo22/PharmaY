@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package model;
 
 import DAO.ConvenioDAO;
@@ -16,6 +15,7 @@ import java.util.List;
  * @author winicius
  */
 public class Distribuidor {
+
     private int idDistribuidor;
     private String razaoSocial;
     private String cnpj;
@@ -119,14 +119,26 @@ public class Distribuidor {
     public void setCep(String cep) {
         this.cep = cep;
     }
-    
-    public static Distribuidor obterDistribuidores(int codDistribuidor) throws ClassNotFoundException, SQLException {
-        return DistribuidorDAO.getInstance().obterDistribuidores(codDistribuidor);
+
+    public static Distribuidor obterDistribuidor(int codDistribuidor) throws ClassNotFoundException, SQLException {
+        return DistribuidorDAO.getInstancia().obterDistribuidor(codDistribuidor);
+    }
+
+    public static List<Distribuidor> obterDistribuidores() throws ClassNotFoundException, SQLException {
+        return DistribuidorDAO.getInstancia().obterDistribuidores();
+    }
+
+    public void gravar() throws SQLException, ClassNotFoundException {
+        DistribuidorDAO.getInstancia().gravarDistribuidor(this);
+    }
+
+    public void alterar() throws SQLException, ClassNotFoundException {
+      DistribuidorDAO.getInstancia().alterar(this);
     }
     
-    
-           public static List<Distribuidor> obterDistribuidor() throws ClassNotFoundException, SQLException {
-        return DistribuidorDAO.getInstance().obterDistribuidor();
+    public void excluir() throws SQLException, ClassNotFoundException {
+      DistribuidorDAO.getInstancia().excluir(this);
     }
     
+
 }
