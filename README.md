@@ -1,2 +1,2 @@
 # PharmaY
-trabalho da disciplina desenvolvimento web
+Trabalho da disciplina desenvolvimento web
